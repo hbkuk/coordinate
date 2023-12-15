@@ -1,14 +1,8 @@
 package fuel;
 
-public abstract class Car {
+public interface Car {
 
-    abstract int getDistanceToTravel();
+    String getCarName();
 
-    abstract int getEfficiency();
-
-    abstract String getCarName();
-
-    double getChargeQuantity() {
-        return getDistanceToTravel() / getEfficiency();
-    }
+    double getChargeQuantity();
 }

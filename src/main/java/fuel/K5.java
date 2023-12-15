@@ -1,6 +1,6 @@
 package fuel;
 
-public class K5 extends Car {
+public class K5 implements Car {
     private static final int EFFICIENCY = 13;
 
     private static final String NAME = "K5";
@@ -13,17 +13,12 @@ public class K5 extends Car {
     }
 
     @Override
-    int getDistanceToTravel() {
-        return distanceToTravel;
-    }
-
-    @Override
-    int getEfficiency() {
-        return EFFICIENCY;
-    }
-
-    @Override
-    String getCarName() {
+    public String getCarName() {
         return NAME;
+    }
+
+    @Override
+    public double getChargeQuantity() {
+        return (double) distanceToTravel / EFFICIENCY;
     }
 }
