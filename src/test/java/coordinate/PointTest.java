@@ -42,4 +42,12 @@ class PointTest {
         assertEquals(-4, p1.getXDifference(p2));
         assertEquals(0, p1.getYDifference(p2));
     }
+
+    @Test
+    @DisplayName("두 점 사이의 거리를 반환한다.")
+    void two_point_distance() {
+        Point p1 = Point.of(10, 10);
+        Point p2 = Point.of(14, 15);
+        assertEquals(6.403124, p1.getDistance(p2), 0.000001);
+    }
 }

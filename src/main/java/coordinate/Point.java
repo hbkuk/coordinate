@@ -54,4 +54,9 @@ public class Point {
     public int getYDifference(Point point) {
         return this.y - point.y;
     }
+
+    public double getDistance(Point point) {
+        return Math.sqrt(Math.pow(this.getXDifference(point), 2) +
+                Math.pow(this.getYDifference(point), 2));
+    }
 }
